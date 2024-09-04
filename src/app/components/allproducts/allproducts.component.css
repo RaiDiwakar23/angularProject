@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  gap: 3%;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.container .card {
+  width: 22%;
+}
+
+.card img {
+  width: 100%;
+}

@@ -1,0 +1,31 @@
+<h1>Create a New Product</h1>
+
+<form [formGroup]="createProduct" (ngSubmit)="handleSubmit()">
+  <div>
+    <label for="">Title</label>
+    <input type="text" formControlName="title" />
+  </div>
+  <div>
+    <label for="">Price</label>
+    <input type="text" formControlName="price" />
+  </div>
+  <div>
+    <label for="">Description</label>
+    <textarea rows="5" formControlName="description"></textarea>
+  </div>
+  <div>
+    <label for="">Category</label>
+    <select formControlName="categoryId">
+      <option value="1">Clothes</option>
+      <option value="2">Electronics</option>
+      <option value="3">Furniture</option>
+      <option value="4">Shoes</option>
+      <option value="5">Miscellaneous</option>
+    </select>
+  </div>
+  <div>
+    <label for="">Image</label>
+    <input type="text" formControlName="images" />
+  </div>
+  <button type="submit">Create product</button>
+</form>

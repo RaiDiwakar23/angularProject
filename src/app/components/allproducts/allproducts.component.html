@@ -1,0 +1,20 @@
+<h1>LIST OF ALL PRODUCTS</h1>
+<button (click)="handleNavigation()">Add Product</button>
+
+<section class="container">
+  <div class="card" *ngFor="let ele of allProductData">
+    <img [src]="ele.images[0]" alt="" />
+    <section class="cardDetails">
+      <h3>{{ ele.title }}</h3>
+
+      <p>Price: {{ ele.price }}</p>
+
+      <p [title]="ele.description">
+        Description: {{ ele.description | ellipse }}
+      </p>
+
+      <p>Category: {{ ele.category.name }}</p>
+      <button (click)="handleRoute(ele.id)">View</button>
+    </section>
+  </div>
+</section>
