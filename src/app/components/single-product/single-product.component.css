@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+img {
+  width: 100%;
+}
+
+.container aside:first-child {
+  width: 40%;
+  border-right: 1px solid lightgray;
+  padding-right: 1rem;
+}
+.container aside:last-child {
+  width: 50%;
+}
+
+.container aside div:last-child img {
+  width: 33%;
+}
+
+.del {
+  margin-left: 1rem;
+  background-color: red;
+}

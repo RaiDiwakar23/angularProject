@@ -35,7 +35,7 @@ export class AllproductsComponent {
   }
 
   handleRoute(id: any) {
-    // this.router.navigateByUrl(`/single/${id}`);
+    this.router.navigateByUrl(`/single/${id}`);
     console.log(id);
   }
 }

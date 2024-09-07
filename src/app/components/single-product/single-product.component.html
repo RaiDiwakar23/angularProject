@@ -1,3 +1,19 @@
-<p>Title: {{ singleProduct.title }}</p>
-<p>Description: {{ singleProduct.description }}</p>
-<p>Price: {{ singleProduct.price }}</p>
+<section class="container">
+  <aside>
+    <div>
+      <img [src]="singleProduct.images[0]" alt="" />
+    </div>
+    <div>
+      <img [src]="img" alt="" *ngFor="let img of singleProduct.images" />
+    </div>
+  </aside>
+  <aside>
+    <h2>{{ singleProduct.title }}</h2>
+    <p>PRICE: {{ singleProduct.price }}</p>
+    <p>Description: {{ singleProduct.description }}</p>
+    <p>Category: {{ singleProduct.category.name }}</p>
+    <hr />
+    <button (click)="handleNavigate(singleProduct.id)">Update</button>
+    <button class="del" (click)="handleDelete(singleProduct.id)">Delete</button>
+  </aside>
+</section>

@@ -1,9 +1,18 @@
-<h1>LIST OF ALL PRODUCTS</h1>
-<button (click)="handleNavigation()">Add Product</button>
+<header>
+  <h1>LIST OF ALL PRODUCTS</h1>
+  <aside><button (click)="handleNavigation()">Add Product</button></aside>
+</header>
 
 <section class="container">
   <div class="card" *ngFor="let ele of allProductData">
-    <img [src]="ele.images[0]" alt="" />
+    <img
+      [src]="
+        ele.images[0].includes('[')
+          ? ele.images[0].slice(2).slice(0, -2)
+          : ele.images[0]
+      "
+      alt=""
+    />
     <section class="cardDetails">
       <h3>{{ ele.title }}</h3>
 

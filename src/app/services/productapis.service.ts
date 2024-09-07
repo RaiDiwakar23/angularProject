@@ -18,4 +18,15 @@ export class ProductapisService {
   getSingleProduct(id: any) {
     return this.http.get(`https://api.escuelajs.co/api/v1/products/${id}`);
   }
+
+  deleteSingle(id: any) {
+    return this.http.delete(`https://api.escuelajs.co/api/v1/products/${id}`);
+  }
+
+  updateProduct(id: any, payload: any) {
+    return this.http.put(
+      `https://api.escuelajs.co/api/v1/products/${id}`,
+      payload
+    );
+  }
 }

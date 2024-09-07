@@ -1,6 +1,6 @@
-<h1>Create a New Product</h1>
+<h1>Update Product</h1>
 
-<form [formGroup]="createProduct" (ngSubmit)="handleSubmit()" class="container">
+<form [formGroup]="updateProduct" (ngSubmit)="handleSubmit()" class="container">
   <div>
     <label for="">Title</label>
     <input type="text" formControlName="title" />
@@ -27,5 +27,5 @@
     <label for="">Image</label>
     <input type="text" formControlName="images" />
   </div>
-  <button type="submit">Create product</button>
+  <button type="submit">Update product</button>
 </form>
